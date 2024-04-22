@@ -2,10 +2,12 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": false
   },
   "newProjectRoot": "projects",
   "projects": {
+
     "testApp": {
       "projectType": "application",
       "schematics": {
@@ -22,6 +24,7 @@
           "options": {
             "outputPath": "dist/test-app",
             "index": "src/index.html",
+            "preserveSymlinks" : true,
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
